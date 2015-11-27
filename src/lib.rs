@@ -438,6 +438,7 @@ mod test {
     }
 
     #[test]
+    #[allow(trivial_numeric_casts)]
     fn create_directories_files_and_read_files() {
         // Create a client
         let cstring_pin = eval_result!(generate_random_cstring(10));

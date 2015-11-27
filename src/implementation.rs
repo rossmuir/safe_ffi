@@ -17,7 +17,7 @@
 
 use std::error::Error;
 
-#[allow(unsafe_code)]
+#[allow(unsafe_code, trivial_numeric_casts)]
 pub fn c_uint8_ptr_to_vec(c_uint8_ptr: *const ::libc::uint8_t, c_size: ::libc::size_t) -> Vec<u8> {
     unsafe { ::std::slice::from_raw_parts(c_uint8_ptr, c_size as usize).to_vec() }
 }
